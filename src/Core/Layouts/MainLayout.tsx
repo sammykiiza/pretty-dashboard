@@ -5,12 +5,17 @@ import { MainLayoutProps } from '../Types/Layouts/MainLayout/mainLayoutProps'
 
 function MainLayout(props: MainLayoutProps) {
   return (
-    <>
-      <SideMenu />
-      <div>
-        {props.children}
+    <div className='w-screen h-screen bg-slate-100'>
+      <div className='flex'>
+        <div>
+          <SideMenu />
+        </div>
+
+        <div>
+          {props.children}
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 
