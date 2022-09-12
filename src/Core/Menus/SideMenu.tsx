@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AdjustmentsHorizontalIcon, HomeIcon, MinusIcon, PlusIcon, PresentationChartLineIcon, QueueListIcon } from '@heroicons/react/24/outline'
+import { AdjustmentsHorizontalIcon, ArrowRightOnRectangleIcon, BellAlertIcon, ChatBubbleBottomCenterIcon, FlagIcon, HomeIcon, MinusIcon, PlusIcon, PresentationChartLineIcon, QueueListIcon } from '@heroicons/react/24/outline'
 
 function SideMenu() {
     const [show1, setShow1] = useState(false);
@@ -10,7 +10,7 @@ function SideMenu() {
     return (
         <div className='h-screen w-60 bg-white border-r border-r-slate-200'>
             <div className='h-16 border-b border-b-slate-200'>
-                Logo
+                <div className='py-5 px-8 text-xl'>Logo</div>
             </div>
             <div className='h-3/5 border-b border-b-slate-200' id="sidenavExample">
                 {/* home */}
@@ -47,7 +47,6 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-
                 </a>
 
 
@@ -85,7 +84,6 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-
                 </a>
 
 
@@ -126,7 +124,6 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-
                 </a>
 
 
@@ -164,7 +161,6 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-
                 </a>
 
                 {/* settings */}
@@ -201,10 +197,52 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-
                 </a>
             </div>
-            <div></div>
+
+            <div className='pt-4'>
+                <a
+                    href="!#"
+                    className='w-full'
+                >
+                    <div className='flex items-center'>
+                        <div className='p-2'>
+                            <FlagIcon className='h-4 w-4' />
+                        </div>
+                        <div className='pl-2 text-sm text-ellipsis whitespace-nowrap'><span>Support</span></div>
+                    </div>
+                </a>
+
+                <a
+                    href="!#"
+                    className='w-full'
+                >
+                    <div className='flex justify-between'>
+                        <div className='flex items-center'>
+                            <div className='p-2'>
+                                <ChatBubbleBottomCenterIcon className='h-4 w-4' />
+                            </div>
+                            <div className='pl-2 text-sm text-ellipsis whitespace-nowrap'><span>Messages</span></div>
+                        </div>
+
+                        <div className='p-2'>
+                        <BellAlertIcon className='h-4 w-4 animate-bounce text-green-600' />
+                        </div>
+                    </div>
+                </a>
+
+                <a
+                    href="!#"
+                    className='w-full'
+                >
+                    <div className='flex items-center'>
+                        <div className='p-2'>
+                            <ArrowRightOnRectangleIcon className='h-4 w-4 text-red-500' />
+                        </div>
+                        <div className='pl-2 text-sm text-ellipsis whitespace-nowrap text-red-500'><span>Logout</span></div>
+                    </div>
+                </a>
+            </div>
         </div>
     )
 }
