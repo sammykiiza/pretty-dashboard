@@ -28,12 +28,12 @@ function SideMenu() {
                     <div className='flex justify-between'>
                         <div className='flex items-center'>
                             <div className='p-2'>
-                                <HomeIcon className='h-4 w-4' />
+                                <HomeIcon className={(show2? 'text-purple-700' : '') + ' h-4 w-4'} />
                             </div>
                             <div className='pl-2 text-sm'><span>Home</span></div>
                         </div>
 
-                        <div className='p-2'>
+                        <div className='p-2 text-slate-500'>
                             {!show2 ? (<PlusIcon className='h-4 w-4' />) : (<MinusIcon className='h-4 w-4' />)}
                         </div>
                     </div>
@@ -65,12 +65,12 @@ function SideMenu() {
                     <div className='flex justify-between'>
                         <div className='flex items-center'>
                             <div className='p-2'>
-                                <PresentationChartLineIcon className='h-4 w-4' />
+                                <PresentationChartLineIcon className={(show1? 'text-purple-700' : '') + ' h-4 w-4'} />
                             </div>
                             <div className='pl-2 text-sm text-ellipsis whitespace-nowrap'><span>Dashboard</span></div>
                         </div>
 
-                        <div className='p-2'>
+                        <div className='p-2 text-slate-500'>
                             {!show1 ? (<PlusIcon className='h-4 w-4' />) : (<MinusIcon className='h-4 w-4' />)}
                         </div>
                     </div>
@@ -102,7 +102,7 @@ function SideMenu() {
                     <div className='flex justify-between'>
                         <div className='flex items-center'>
                             <div className='p-2'>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-4 h-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className={(show3? 'text-purple-700' : '') + ' h-4 w-4'}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
                                 </svg>
 
@@ -110,7 +110,7 @@ function SideMenu() {
                             <div className='pl-2 text-sm text-ellipsis whitespace-nowrap'><span>Projects</span></div>
                         </div>
 
-                        <div className='p-2'>
+                        <div className='p-2 text-slate-500'>
                             {!show3 ? (<PlusIcon className='h-4 w-4' />) : (<MinusIcon className='h-4 w-4' />)}
                         </div>
                     </div>
@@ -142,12 +142,12 @@ function SideMenu() {
                     <div className='flex justify-between'>
                         <div className='flex items-center'>
                             <div className='p-2'>
-                                <QueueListIcon className='h-4 w-4' />
+                                <QueueListIcon className={(show4? 'text-purple-700' : '') + ' h-4 w-4'} />
                             </div>
                             <div className='pl-2 text-sm text-ellipsis whitespace-nowrap'><span>Tasks</span></div>
                         </div>
 
-                        <div className='p-2'>
+                        <div className='p-2 text-slate-500'>
                             {!show4 ? (<PlusIcon className='h-4 w-4' />) : (<MinusIcon className='h-4 w-4' />)}
                         </div>
                     </div>
@@ -178,12 +178,12 @@ function SideMenu() {
                     <div className='flex justify-between'>
                         <div className='flex items-center'>
                             <div className='p-2'>
-                                <AdjustmentsHorizontalIcon className='h-4 w-4' />
+                                <AdjustmentsHorizontalIcon className={(show5? 'text-purple-700' : '') + ' h-4 w-4'} />
                             </div>
                             <div className='pl-2 text-sm text-ellipsis whitespace-nowrap'><span>Settings</span></div>
                         </div>
 
-                        <div className='p-2'>
+                        <div className='p-2 text-slate-500'>
                             {!show5 ? (<PlusIcon className='h-4 w-4' />) : (<MinusIcon className='h-4 w-4' />)}
                         </div>
                     </div>
@@ -226,7 +226,7 @@ function SideMenu() {
                         </div>
 
                         <div className='p-2'>
-                        <BellAlertIcon className='h-4 w-4 animate-bounce text-green-600' />
+                            <BellAlertIcon className='h-4 w-4 animate-bounce text-green-600' />
                         </div>
                     </div>
                 </a>
