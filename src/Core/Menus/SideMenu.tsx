@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AdjustmentsHorizontalIcon, ArrowRightOnRectangleIcon, BellAlertIcon, ChatBubbleBottomCenterIcon, FlagIcon, HomeIcon, MinusIcon, PlusIcon, PresentationChartLineIcon, QueueListIcon } from '@heroicons/react/24/outline'
+import { AdjustmentsHorizontalIcon, ArrowRightOnRectangleIcon, ChatBubbleBottomCenterIcon, FlagIcon, HomeIcon, MinusIcon, PlusIcon, PresentationChartLineIcon, QueueListIcon } from '@heroicons/react/24/outline'
 
 function SideMenu() {
     const [show1, setShow1] = useState(false);

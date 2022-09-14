@@ -5,9 +5,9 @@ import { LineSeries, XYPlot } from 'react-vis';
 import * as d3 from 'd3-shape'
 
 
-const BitCoinCard = () => {
-  const { data = [] } = api.useCoinsDetailsQuery('bitcoin');
-  const { data: priceData = [] } = api.useCoinsMarketDataQuery('bitcoin');
+const CardanoCard = () => {
+  const { data = [] } = api.useCoinsDetailsQuery('cardano');
+  const { data: priceData = [] } = api.useCoinsMarketDataQuery('cardano');
 
   const coinChartData = priceData?.prices?.map((value: number[]) => ({ x: value[0], y: value[1].toFixed(2) }));
   const configuredCurve = d3.curveBasis;
@@ -23,13 +23,13 @@ const BitCoinCard = () => {
             data={coinChartData}
             curve={configuredCurve}
             style={{strokeLinejoin: "round"}}
-            stroke='green'
+            stroke='aqua'
           />
         </XYPlot>
       </div>
       <div className='flex px-4 py-3 items-center'>
         <div>
-          <img src={data?.image?.large} alt='bitcoin logo' className='w-8 h-8' />
+          <img src={data?.image?.large} alt='cardano logo' className='w-8 h-8' />
         </div>
         <div className='px-2 flex flex-col'>
           <span className='text-xs text-slate-400 font-bold uppercase'>{data?.symbol}</span>
@@ -41,4 +41,4 @@ const BitCoinCard = () => {
 }
 
 
-export default BitCoinCard
+export default CardanoCard
