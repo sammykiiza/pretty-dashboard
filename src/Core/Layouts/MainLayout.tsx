@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../Menus/Navbar'
 import SideMenu from '../Menus/SideMenu'
 import { MainLayoutProps } from '../Types/Layouts/MainLayout/mainLayoutProps'
 
@@ -11,8 +12,13 @@ function MainLayout(props: MainLayoutProps) {
           <SideMenu />
         </div>
 
-        <div>
+        <div className='w-full'>
+          <div>
+            <Navbar/>
+          </div>
+          <div>
           {props.children}
+          </div>
         </div>
       </div>
     </div>

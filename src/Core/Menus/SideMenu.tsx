@@ -14,9 +14,8 @@ function SideMenu() {
             </div>
             <div className='h-3/5 border-b border-b-slate-200' id="sidenavExample">
                 {/* home */}
-                <a
-                    href='!#'
-                    className='w-full transition duration-300 ease-in-out'
+                <div
+                    className='w-full transition duration-300 ease-in-out cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -47,13 +46,12 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-                </a>
+                </div>
 
 
                 {/* dashboard */}
-                <a
-                    href='!#'
-                    className='w-full transition duration-300 ease-in-out'
+                <div
+                    className='w-full transition duration-300 ease-in-out cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -84,13 +82,12 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-                </a>
+                </div>
 
 
                 {/* projects */}
-                <a
-                    href='!#'
-                    className='w-full transition duration-300 ease-in-out'
+                <div
+                    className='w-full transition duration-300 ease-in-out cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -124,13 +121,12 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-                </a>
+                </div>
 
 
                 {/* tasks */}
-                <a
-                    href='!#'
-                    className='w-full transition duration-300 ease-in-out'
+                <div
+                    className='w-full transition duration-300 ease-in-out cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -161,12 +157,11 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-                </a>
+                </div>
 
                 {/* settings */}
-                <a
-                    href='!#'
-                    className='w-full transition duration-300 ease-in-out'
+                <div
+                    className='w-full transition duration-300 ease-in-out cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -197,7 +192,7 @@ function SideMenu() {
                             <a href="!#"><li className='hover:bg-slate-200 py-2 px-4 mr-2 rounded'>All Transactions</li></a>
                         </ul>
                     </div>
-                </a>
+                </div>
             </div>
 
             <div className='pt-4'>
@@ -226,7 +221,9 @@ function SideMenu() {
                         </div>
 
                         <div className='p-2'>
-                            <BellAlertIcon className='h-4 w-4 animate-bounce text-green-600' />
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className='h-2 w-2 animate-pulse fill-green-600' >
+                                <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+                            </svg>
                         </div>
                     </div>
                 </a>
