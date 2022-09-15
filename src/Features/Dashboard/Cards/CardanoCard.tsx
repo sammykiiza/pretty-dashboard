@@ -10,9 +10,9 @@ const CardanoCard = () => {
   const { data: priceData = [] } = api.useCoinsMarketDataQuery('cardano');
 
   const coinChartData = priceData?.prices?.map((value: number[]) => ({ x: value[0], y: value[1].toFixed(2) }));
-  const configuredCurve = d3.curveBasis;
+  const configuredCurve = d3.curveCatmullRom.alpha(1);
   return (
-    <div className='shadow-md h-52 w-32 m-6 rounded-md'>
+    <div className='shadow-md h-52 w-32 m-6 rounded-md hover:bg-white cursor-pointer'>
       <div className='px-4 py-3 flex flex-col'>
         <span className='text-xs text-slate-400 font-bold'>USD</span>
         <span className='text-xs font-bold'>3,244.97</span>
