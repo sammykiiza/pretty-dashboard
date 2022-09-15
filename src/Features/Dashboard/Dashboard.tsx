@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MainLayout from '../../Core/Layouts/MainLayout'
 import BitCoinCard from './Cards/BitCoinCard'
 import CardanoCard from './Cards/CardanoCard'
@@ -9,6 +9,9 @@ import RecentTransactions from './RecentTransactions'
 import Transaction from './Tables/Transaction'
 
 function Dashboard() {
+  useEffect(() => {
+    document.title = "Pretty Dashboard"
+ }, []);
   return (
     <MainLayout>
       <div className='flex'>
