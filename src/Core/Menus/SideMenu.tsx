@@ -10,12 +10,12 @@ function SideMenu() {
     return (
         <div className='h-screen w-60 bg-white border-r border-r-slate-200'>
             <div className='h-16 border-b border-b-slate-200'>
-                <div className='py-5 px-8 text-xl'>Logo</div>
+                <div className='py-5 px-8 text-xl'><a href='!#'>Logo</a></div>
             </div>
             <div className='h-3/5 border-b border-b-slate-200' id="sidenavExample">
                 {/* home */}
                 <div
-                    className='w-full transition duration-300 ease-in-out cursor-pointer'
+                    className='w-full transition duration-300 ease-in-out hover:bg-slate-100 cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -51,7 +51,7 @@ function SideMenu() {
 
                 {/* dashboard */}
                 <div
-                    className='w-full transition duration-300 ease-in-out cursor-pointer'
+                    className='w-full transition duration-300 ease-in-out hover:bg-slate-100 cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -87,7 +87,7 @@ function SideMenu() {
 
                 {/* projects */}
                 <div
-                    className='w-full transition duration-300 ease-in-out cursor-pointer'
+                    className='w-full transition duration-300 ease-in-out hover:bg-slate-100 cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -126,7 +126,7 @@ function SideMenu() {
 
                 {/* tasks */}
                 <div
-                    className='w-full transition duration-300 ease-in-out cursor-pointer'
+                    className='w-full transition duration-300 ease-in-out hover:bg-slate-100 cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -161,7 +161,7 @@ function SideMenu() {
 
                 {/* settings */}
                 <div
-                    className='w-full transition duration-300 ease-in-out cursor-pointer'
+                    className='w-full transition duration-300 ease-in-out hover:bg-slate-100 cursor-pointer'
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="dark"
                     data-bs-toggle="collapse"
@@ -200,7 +200,7 @@ function SideMenu() {
                     href="!#"
                     className='w-full'
                 >
-                    <div className='flex items-center'>
+                    <div className='flex items-center hover:bg-slate-100'>
                         <div className='p-2'>
                             <FlagIcon className='h-4 w-4' />
                         </div>
@@ -212,7 +212,7 @@ function SideMenu() {
                     href="!#"
                     className='w-full'
                 >
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between hover:bg-slate-100'>
                         <div className='flex items-center'>
                             <div className='p-2'>
                                 <ChatBubbleBottomCenterIcon className='h-4 w-4' />
@@ -232,7 +232,7 @@ function SideMenu() {
                     href="!#"
                     className='w-full'
                 >
-                    <div className='flex items-center'>
+                    <div className='flex items-center hover:bg-slate-100'>
                         <div className='p-2'>
                             <ArrowRightOnRectangleIcon className='h-4 w-4 text-red-500' />
                         </div>

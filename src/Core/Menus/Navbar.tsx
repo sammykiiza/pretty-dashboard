@@ -1,5 +1,5 @@
 import { Menu, Transition } from '@headlessui/react'
-import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { BellIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import React, { Fragment } from 'react'
 
 function Navbar() {
@@ -30,7 +30,12 @@ function Navbar() {
                         ' focus:ring-offset-gray-800"
                     >
                         <span className="sr-only">View notifications</span>
-                        <BellAlertIcon className="h-6 w-6 stroke-red-600 animate-pulse" aria-hidden="true" />
+                        <span className='absolute mr-0'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className='h-2 w-2 animate-pulse fill-red-600' >
+                                <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z" />
+                            </svg>
+                        </span>
+                        <BellIcon className="h-7 w-7 p-1 relative" aria-hidden="true" />
                     </button>
 
                     {/* Profile dropdown */}
