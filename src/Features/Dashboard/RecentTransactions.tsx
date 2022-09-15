@@ -52,7 +52,7 @@ function RecentTransactions() {
   return (
     <>
       {transactions.map((transaction) => (
-        <div key={transaction.id} className='flex items-center border-b border-b-slate-200 pb-3'>
+        <a href='!#' key={transaction.id} className='flex items-center border-b border-b-slate-200 py-1 px-3 rounded hover:bg-white pb-3'>
           <div className='w-8 h-8'>
             <img
               src={transaction.img}
@@ -70,7 +70,7 @@ function RecentTransactions() {
             <div className='text-[10px] text-slate-400'>{transaction.time}</div>
           </div>
           </div>
-        </div>
+        </a>
       ))}
     </>
   )
