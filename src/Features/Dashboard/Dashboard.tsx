@@ -4,6 +4,7 @@ import BitCoinCard from './Cards/BitCoinCard'
 import CardanoCard from './Cards/CardanoCard'
 import DashCard from './Cards/DashCard'
 import EthereumCard from './Cards/EthereumCard'
+import RecentTransactions from './RecentTransactions'
 import Transaction from './Tables/Transaction'
 
 function Dashboard() {
@@ -24,6 +25,19 @@ function Dashboard() {
           <h2 className='pt-2 font-bold'>Transaction</h2>
           <div className='pt-1'>
             <Transaction/>
+          </div>
+        </div>
+      </div>
+
+      <div className='flex'>
+        <div className='ml-5'>
+          <div className='flex items-center space-x-4'>
+            <h2 className='font-bold'>Recent Transactions</h2>
+            <span><a href="!#" className='text-sm font-bold text-blue-700'>See all</a></span>
+          </div>
+
+          <div className='pt-4'>
+            <RecentTransactions />
           </div>
         </div>
       </div>

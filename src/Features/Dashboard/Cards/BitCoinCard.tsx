@@ -12,12 +12,12 @@ const BitCoinCard = () => {
   const coinChartData = priceData?.prices?.map((value: number[]) => ({ x: value[0], y: value[1].toFixed(2) }));
   const configuredCurve = d3.curveCatmullRom.alpha(0.5);
   return (
-    <div className='shadow-md h-52 w-32 m-6 mr-0 rounded-md hover:bg-white cursor-pointer'>
+    <div className='shadow-md h-44 w-32 m-6 mr-0 rounded-md hover:bg-white cursor-pointer'>
       <div className='px-4 py-3 flex flex-col'>
         <span className='text-xs text-slate-400 font-bold'>USD</span>
         <span className='text-xs font-bold'>3,244.97</span>
       </div>
-      <div className='py-1'>
+      <div>
         <XYPlot height={80} width={130}>
           <LineSeries
             data={coinChartData}
@@ -28,7 +28,7 @@ const BitCoinCard = () => {
           />
         </XYPlot>
       </div>
-      <div className='flex px-4 py-3 items-center'>
+      <div className='flex px-4 items-center'>
         <div>
           <img src={data?.image?.large} alt='bitcoin logo' className='w-8 h-8' />
         </div>
