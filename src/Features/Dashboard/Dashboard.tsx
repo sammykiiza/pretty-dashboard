@@ -23,7 +23,7 @@ function Dashboard() {
         </div>
 
         <div className='ml-10'>
-          <h2 className='pt-2 font-bold'>Transaction</h2>
+          <h2 className='pt-2 font-bold'>Transactions</h2>
           <div className='pt-1'>
             <Transaction/>
           </div>

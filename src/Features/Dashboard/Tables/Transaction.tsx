@@ -1,5 +1,6 @@
 import React from 'react'
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
+import { AdjustmentsHorizontalIcon, ArrowDownOnSquareIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
 
 const rows: GridRowsProp = [
     { id: 1, col1: 'Received', col2: '12ETH', col3: 'Pending' },
@@ -8,7 +9,32 @@ const rows: GridRowsProp = [
 ];
 
 const columns: GridColDef[] = [
-    { field: 'col1', headerName: 'Type', minWidth: 100, flex: 1, headerAlign: 'center', align: 'center' },
+    { field: 'col1', headerName: 'Type', minWidth: 100, flex: 1, headerAlign: 'center', align: 'center',
+        renderCell: (cellValues) => {
+            return (
+                <div className={'px-3 py-1 rounded-full cursor-pointer'}>
+                    {cellValues.row.col1 === 'Received' &&
+                        <div className='flex space-x-2 items-center'>
+                            <div className='bg-purple-400 rounded full p-1'><ArrowDownOnSquareIcon className='w-6 h-6 rounded-full' /></div>
+                            <span className='text-slate-600 font-bold'>{cellValues.row.col1}</span>
+                        </div>
+                    }
+                    {cellValues.row.col1 === 'Sent' &&
+                        <div className='flex space-x-4 items-center'>
+                            <div className='bg-green-400 rounded full p-1 -ml-4'><PaperAirplaneIcon className='w-6 h-6 rounded-full' /></div>
+                            <span className='text-slate-600 font-bold'>{cellValues.row.col1}</span>
+                        </div>
+                    }
+                    {cellValues.row.col1 === 'Exchange' &&
+                        <div className='flex space-x-4 items-center'>
+                            <div className='bg-yellow-400 rounded full p-1 ml-4'><AdjustmentsHorizontalIcon className='w-6 h-6 rounded-full' /></div>
+                            <span className='text-slate-600 font-bold'>{cellValues.row.col1}</span>
+                        </div>
+                    }
+                </div>
+            )
+        }
+},
     { field: 'col2', headerName: 'Amount', minWidth: 100, flex: 1, headerAlign: 'center', align: 'center' },
     { field: 'col3', headerName: 'Status', minWidth: 100, flex: 1, headerAlign: 'center', align: 'center', 
     renderCell: (cellValues) => {
